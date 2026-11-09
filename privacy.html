@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — LifeNifty Cloud Pipeline</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+    }
+    header {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+    .badge {
+      background: #e8f0fe;
+      color: #1967d2;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+    h2 {
+      color: #202124;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #f1f3f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #eaeaea;
+      font-size: 0.9em;
+      color: #666;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <span class="badge">LifeNifty Cloud Pipeline</span>
+    <p><strong>Effective Date:</strong> November 9, 2026 | <strong>Last Updated:</strong> November 9, 2026</p>
+  </header>
+
+  <main>
+    <h2>1. General Information</h2>
+    <p>LifeNifty Cloud Pipeline is an internal, personal-use automation tool operated solely on behalf of the official LifeNifty YouTube channel (<code>@lifeniftymedia</code>, Channel ID <code>UCZ_BoVZfX-QOiRkvB95R_5A</code>). This tool is not a public commercial service, SaaS product, or multi-tenant web application.</p>
+
+    <h2>2. Google User Data Accessed & Scopes</h2>
+    <p>The application interacts exclusively with the official YouTube Data API v3 using official OAuth 2.0 Authorization Code Flow for offline access. The following scopes are declared and utilized:</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/youtube.readonly</code>: Used solely to verify the authenticated YouTube channel ID (<code>UCZ_BoVZfX-QOiRkvB95R_5A</code>) and inspect video processing statuses (SD/HD encoding, copyright status, privacy status) in read-only mode.</li>
+      <li><code>https://www.googleapis.com/auth/youtube.upload</code>: Used solely to upload pre-approved video demonstrations strictly in <code>private</code> visibility.</li>
+      <li><code>https://www.googleapis.com/auth/youtube.force-ssl</code>: Used solely to update metadata and configure scheduled release dates for pre-approved private video demonstrations.</li>
+    </ul>
+
+    <h2>3. Data Storage & Security</h2>
+    <p>All sensitive credentials (client secrets and OAuth refresh tokens) are encrypted and stored securely within restricted GitHub Repository Secrets. No credential data is ever stored in public code, exposed in build artifacts, or accessible to third parties. All network operations utilize secure, encrypted HTTPS/TLS connections.</p>
+
+    <h2>4. No Sharing or Sale of User Data</h2>
+    <p>LifeNifty Media does not share, transfer, disclose, or sell Google user data or YouTube account data to any third party, advertising network, or external entity. Data accessed via Google APIs is used exclusively to operate the personal channel pipeline.</p>
+
+    <h2>5. User Rights & Revocation</h2>
+    <p>The channel owner retains complete control over application access at all times. Permissions can be viewed or revoked at any moment via the official <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions Settings</a>.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>For any questions, concerns, or requests regarding this Privacy Policy, please contact:</p>
+    <p><strong>LifeNifty Media</strong><br>
+    Email: <a href="mailto:lifenifty.media@gmail.com">lifenifty.media@gmail.com</a><br>
+    YouTube Channel: <a href="https://www.youtube.com/@lifeniftymedia" target="_blank" rel="noopener">https://www.youtube.com/@lifeniftymedia</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LifeNifty Media. <a href="index.html">&larr; Back to Home</a></p>
+  </footer>
+</body>
+</html>
