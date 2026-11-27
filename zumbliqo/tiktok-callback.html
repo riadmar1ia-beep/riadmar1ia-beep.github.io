@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZUMBLIQO Publisher — TikTok OAuth Callback</title>
+<style>
+body { font-family: system-ui, sans-serif; background: #0a0f1a; color: #f8fafc; max-width: 680px; margin: 48px auto; padding: 24px; }
+h1 { color: #2dd4bf; }
+code { background: #1e293b; padding: 4px 8px; border-radius: 6px; word-break: break-all; display: inline-block; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>ZUMBLIQO Publisher — Authorization Received</h1>
+<p>This internal callback endpoint is used solely by the ZUMBLIQO owner to complete TikTok OAuth authorization.</p>
+<p id="status">Checking query parameters...</p>
+<script>
+const p = new URLSearchParams(window.location.search);
+const st = document.getElementById("status");
+if (p.get("error")) {
+  st.textContent = "Authorization error: " + p.get("error") + " (" + (p.get("error_description") || "") + ")";
+} else if (p.get("code")) {
+  st.textContent = "Authorization code received cleanly (state=" + (p.get("state") || "none") + "). You may now exchange it securely outside chat.";
+} else {
+  st.textContent = "Ready. No authorization code in URL.";
+}
+</script>
+</body>
+</html>
