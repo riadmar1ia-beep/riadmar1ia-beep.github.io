@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Privacy Policy and Data Deletion instructions for ZUMBLIQO and its internal publishing app Zumbliqo Publisher (Meta Graph API, YouTube, Bluesky, Discord).">
+<meta name="description" content="Privacy Policy and Data Deletion instructions for ZUMBLIQO and ZUMBLIQO Publisher (Meta Graph API, TikTok Content Posting API, YouTube, Bluesky, Discord).">
 <title>ZUMBLIQO — Privacy Policy &amp; Data Deletion</title>
 <style>
 :root { color-scheme: dark; font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif; }
@@ -27,46 +27,49 @@ footer { font-size: .85rem; color: #94a3b8; border-top: 1px solid #334155; margi
 <h1>Privacy Policy</h1>
 <p class="meta">Last updated: 27 November 2026</p>
 
-<p><strong>ZUMBLIQO</strong> is a digital media channel producing short-form international visual news videos (Visual News Pro). This page explains what data our internal publishing tool <strong>Zumbliqo Publisher</strong> processes across Meta platforms (Facebook and Instagram) as well as YouTube, Bluesky, and Discord, and how to request data deletion.</p>
+<p><strong>ZUMBLIQO</strong> is a digital media channel producing short-form international visual news videos (Visual News Pro). This page explains what data our internal publishing tool <strong>ZUMBLIQO Publisher</strong> processes across TikTok, Meta (Facebook and Instagram), YouTube, Bluesky, and Discord, and how to revoke access or request data deletion.</p>
 
 <h2>1. Controller and Contact</h2>
 <p>Responsible project: <strong>ZUMBLIQO</strong>.<br>
 Contact email for privacy inquiries and data deletion requests: <a href="mailto:zumbliqo@gmail.com">zumbliqo@gmail.com</a>.</p>
 
-<h2>2. Scope of Zumbliqo Publisher (Internal Tool Only)</h2>
-<p><strong>Zumbliqo Publisher</strong> is a private, internal automation tool operated exclusively by the ZUMBLIQO owner to publish ZUMBLIQO's own videos to ZUMBLIQO's own official accounts. It is <strong>not</strong> offered to third-party users, does not provide public user login, and does not access any third-party Facebook, Instagram, or YouTube account.</p>
+<h2>2. Scope of ZUMBLIQO Publisher (Internal Tool Only)</h2>
+<p><strong>ZUMBLIQO Publisher</strong> is a private, internal automation tool operated exclusively by the ZUMBLIQO owner to upload ZUMBLIQO's own videos to ZUMBLIQO's own official accounts. It is <strong>not</strong> offered to third-party users and does not access any third-party TikTok, Facebook, Instagram, or YouTube account.</p>
 
-<h2>3. Meta Graph API (Facebook Reels &amp; Instagram Reels)</h2>
-<p>Using the official Meta Graph API with permissions explicitly granted by the ZUMBLIQO Page and Instagram Business account administrator (<code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>pages_manage_posts</code>, <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>business_management</code>), Zumbliqo Publisher:</p>
+<h2>3. TikTok API (Content Posting API — Inbox Draft Upload)</h2>
+<p>Using the official TikTok Login Kit and Content Posting API with permissions explicitly granted by the <code>@zumbliqo</code> account owner (<code>user.info.basic</code>, <code>video.upload</code>), ZUMBLIQO Publisher:</p>
 <ul>
-<li>Uploads and publishes ZUMBLIQO's own short-form videos to the official <strong>Zumbliqo</strong> Facebook Page and the linked <strong>@zumbliqo</strong> Instagram Business account.</li>
-<li>Reads basic own-account metadata (Page ID, Instagram Business Account ID, media count, and publishing quota limit) solely to verify connectivity and prevent duplicate uploads.</li>
+<li>Transfers ZUMBLIQO's own short-form MP4 videos to the <code>@zumbliqo</code> TikTok app Inbox as drafts (<code>/v2/post/publish/inbox/video/init/</code>) for manual review and final publishing inside the native TikTok application.</li>
+<li>Maintains encrypted OAuth access and rotating refresh tokens solely to authenticate the <code>@zumbliqo</code> account.</li>
 </ul>
-<p>Zumbliqo Publisher does <strong>not</strong> read private messages, does <strong>not</strong> collect or store personal data about followers, viewers, or commenters, does <strong>not</strong> sell or transfer data to third parties, and does <strong>not</strong> use Meta data for advertising or profiling.</p>
+<p>ZUMBLIQO Publisher does <strong>not</strong> collect, store, or process data about TikTok followers, viewers, comments, or private messages, and does <strong>not</strong> sell or share TikTok data with any third party.</p>
 
-<h2>4. Other Connected Platforms</h2>
+<h2>4. Meta Graph API (Facebook Reels &amp; Instagram Reels)</h2>
+<p>Using the official Meta Graph API with permissions explicitly granted by the ZUMBLIQO Page and Instagram Business account administrator (<code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>pages_manage_posts</code>, <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>business_management</code>), ZUMBLIQO Publisher uploads and publishes ZUMBLIQO's own short-form videos to the official <strong>Zumbliqo</strong> Facebook Page and linked <strong>@zumbliqo</strong> Instagram Business account, and reads basic own-account metadata solely to verify connectivity and prevent duplicates.</p>
+
+<h2>5. Other Connected Platforms</h2>
 <ul>
-<li><strong>YouTube API Services</strong>: uploads ZUMBLIQO's own videos to the <code>@ZUMBLIQO</code> channel and reads own-channel upload metadata to prevent duplicates, subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li><strong>YouTube API Services</strong>: uploads ZUMBLIQO's own videos to the <code>@ZUMBLIQO</code> channel, subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
 <li><strong>Bluesky &amp; Discord</strong>: publishes ZUMBLIQO's own videos and links to ZUMBLIQO's official Bluesky account and Discord announcement channel.</li>
 </ul>
 
-<h2>5. Data Storage, Security, and Retention</h2>
+<h2>6. Data Storage, Security, and Retention</h2>
 <ul>
-<li><strong>Access tokens and account identifiers</strong> (Meta Page Access Token, YouTube OAuth refresh token, Bluesky app password, Discord webhook URL) are stored exclusively as encrypted secrets inside a private GitHub repository and used in memory during automated GitHub Actions runs. They are retained only until revoked or replaced.</li>
-<li><strong>Publication logs</strong> store only non-personal publication metadata (video title, SHA-256 hash, public post URL, public news sources, and media licenses) to enforce anti-duplicate checks and editorial traceability.</li>
-<li>This static privacy page sets <strong>no cookies</strong>, uses <strong>no trackers</strong>, and collects <strong>no form data</strong>.</li>
+<li><strong>Access and refresh tokens</strong> are stored exclusively as encrypted secrets inside a private GitHub repository and used only in memory during automated GitHub Actions runs. Tokens are rotated securely and retained only until revoked or replaced.</li>
+<li><strong>Publication logs</strong> store only non-personal video metadata (title, SHA-256 hash, upload/post ID, public URL, public news sources, and media licenses) to enforce anti-duplicate checks and editorial traceability.</li>
+<li>This static page sets <strong>no cookies</strong>, uses <strong>no trackers</strong>, and collects <strong>no form data</strong>.</li>
 </ul>
 
-<h2>6. Revoking Access &amp; Data Deletion Requests</h2>
-<p>Because Zumbliqo Publisher only accesses ZUMBLIQO's own accounts, no personal data of external users is collected or stored.</p>
+<h2>7. Revoking Access &amp; Data Deletion Requests</h2>
 <ul>
-<li><strong>Revoke Meta access:</strong> Remove <em>Zumbliqo Publisher</em> at any time from your Facebook Business Integrations settings (<a href="https://www.facebook.com/settings?tab=business_tools">facebook.com/settings?tab=business_tools</a>).</li>
+<li><strong>Revoke TikTok access:</strong> Open the TikTok app &rarr; <em>Settings and privacy &rarr; Security and permissions &rarr; Apps and services permissions</em> and remove <em>ZUMBLIQO Publisher</em>.</li>
+<li><strong>Revoke Meta access:</strong> Remove <em>Zumbliqo Publisher</em> at <a href="https://www.facebook.com/settings?tab=business_tools">facebook.com/settings?tab=business_tools</a>.</li>
 <li><strong>Revoke Google/YouTube access:</strong> Remove access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-<li><strong>Data deletion request:</strong> Send an email to <a href="mailto:zumbliqo@gmail.com">zumbliqo@gmail.com</a> with the subject <code>Data Deletion Request</code>. Any associated tokens or records will be permanently deleted within 48 hours and confirmed by email.</li>
+<li><strong>Data deletion request:</strong> Email <a href="mailto:zumbliqo@gmail.com">zumbliqo@gmail.com</a> with the subject <code>Data Deletion Request</code>. Any associated tokens or records will be permanently deleted within 48 hours.</li>
 </ul>
 
-<h2>7. Updates</h2>
-<p>This policy may be updated if our publishing workflows change. The effective date is shown at the top of this page.</p>
+<h2>8. Updates</h2>
+<p>This policy may be updated if our publishing workflows change. See also our <a href="./terms.html">Terms of Service</a>.</p>
 </main>
 <footer>&copy; 2026 ZUMBLIQO. All rights reserved.</footer>
 </body>
